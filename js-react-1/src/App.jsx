@@ -1,6 +1,7 @@
 import Project01 from "./pages/Project01";
 import Project03 from "./pages/Project03";
 import Project02 from "./pages/project02";
+import Project04 from "./pages/project04";
 
 export default function App() {
   return (
@@ -13,6 +14,9 @@ export default function App() {
       </section>
       <section>
         <Project03></Project03>
+      </section>
+      <section className="py-10">
+        <Project04></Project04>
       </section>
     </>
   );

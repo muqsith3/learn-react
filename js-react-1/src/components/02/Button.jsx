@@ -1,3 +1,5 @@
+import ButtonComponent from "./ButtonComponent";
+
 export default function Button({ step, setStep }) {
   function handlePrevious() {
     if (step > 1) setStep((s) => s - 1);
@@ -9,16 +11,20 @@ export default function Button({ step, setStep }) {
 
   return (
     <div className="flex justify-between ">
-      <button
-        className="text-base border-none cursor-pointer font-bold py-4 px-5 rounded-full flex items-center gap-3 bg-[#7950f2] text-white"
+      <ButtonComponent
+        textColor="text-white"
+        bgColor="[#7950f2]"
         onClick={handlePrevious}>
-        previous
-      </button>
-      <button
-        className="text-base border-none cursor-pointer font-bold py-4 px-5 rounded-full flex items-center gap-3 bg-[#7950f2] text-white"
+        <span>⬅️</span> Previous
+      </ButtonComponent>
+      <ButtonComponent
+        textColor="text-white"
+        bgColor="[#7950f2]"
         onClick={handleNext}>
-        next
-      </button>
+        Next <span>➡️</span>
+      </ButtonComponent>
+
+      {/* reusable button */}
     </div>
   );
 }
